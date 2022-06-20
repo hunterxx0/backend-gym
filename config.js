@@ -15,6 +15,7 @@ const {
 	MESSAGING_SENDER_ID,
 	APP_ID,
 	MEASUREMENT_ID,
+
 } = process.env;
 
 module.exports = {
@@ -29,5 +30,6 @@ module.exports = {
 		messagingSenderId: MESSAGING_SENDER_ID,
 		appId: APP_ID,
 		measurementId: MEASUREMENT_ID,
+
 	}
 }

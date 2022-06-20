@@ -7,7 +7,10 @@ const config = require('../models/member');
 const addMember = async (req, res, next) => {
 	try {
 		const data = req.body;
-		const member = await db.collection('members').doc(data.email).set(data);
+		console.log('member');
+		const member = doc(db, `members/${data.email}`);
+		console.log('setting');
+		setDoc(member, data);
 		res.send('saved');
 	} catch (err) {
 		res.status(400).send(err.message);

@@ -1,9 +1,9 @@
-const { initializeApp } = require('firebase/app');
+const { initializeApp } = require('firebase-admin/app');
+const { getFirestore } = require('firebase-admin/firestore');
 const config = require('./config');
-const { getFirestore } = require('firebase/firestore/lite');
 
 
 const app  = initializeApp(config.firebaseConfig);
-const db = getFirestore(app);
+const db = getFirestore();
 
 module.exports = db;
